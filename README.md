@@ -2,6 +2,8 @@
 
 This is the GitHub repository for the paper "Predicting the Performance of Black-box LLMs thorugh Self-Queries", or QueRE. QueRE extracts representations from LLMs in a black-box fashion that are useful for predicting their performance. To do so in a black-box manner (e.g., without any knowledge of model activations), QueRE uses a set of follow-up questions about a model's greedily sampled response (e.g., on a QA task), and uses the responses to these follow-up questions as the representation itself. We observe that this can accurately predict model performance, even sometimes outperforming white-box methods. These representations can also be useful for distinguishing between clean and adversarially influenced versions of LLMs, as well as auditing that models of the correct size are being provided through an API.
 
+![QueRE figure](figs/quere.jpg)
+
 The full paper can be found [here](add arxiv link here). Our code currently supports GPT Models via the OpenAI API and for LLaMA models (and other huggingface LLMs).
 
 ## Setup
