@@ -17,9 +17,9 @@ pip install -r requirements.txt
 ## Data
 
 This project invovles using multiple different datasets on which to predict model performance. To run our experiments, you will need to download the following datasets: 
-* DHate (https://github.com/bvidgen/Dynamically-Generated-Hate-Speech-Dataset/blob/main/Dynamically%20Generated%20Hate%20Dataset%20v0.2.3.csv), which can be placed in a file "data/datasets/DHate/dhate.csv"
-* HaluEval (https://github.com/RUCAIBox/HaluEval/tree/main/data) and put the files in the folder "data/datasets/halu_eval_data"
-* Boolean Questions (https://github.com/google-research-datasets/boolean-questions) and put the train.jsonl and dev.jsonl files in the folder "data/datasets/BooIQ"
+* [DHate](https://github.com/bvidgen/Dynamically-Generated-Hate-Speech-Dataset/blob/main/Dynamically%20Generated%20Hate%20Dataset%20v0.2.3.csv), which can be placed in a file "data/datasets/DHate/dhate.csv". Note that this dataset contains harmful and offensive text.
+* [HaluEval](https://github.com/RUCAIBox/HaluEval/tree/main/data) and put the files in the folder "data/datasets/halu_eval_data"
+* [Boolean Questions](https://github.com/google-research-datasets/boolean-questions) and put the train.jsonl and dev.jsonl files in the folder "data/datasets/BooIQ"
 
 The files for CommonsenseQA are already provided, and the files for WinoGrande and SQUAD will automatically be downloaded via HuggingFace.
 
