@@ -1,0 +1,13 @@
+accelerate
+datasets
+huggingface-hub
+jsonlines
+matplotlib
+nltk
+numpy
+openai
+pandas
+scikit-learn
+torch
+torchmetrics
+tqdm
