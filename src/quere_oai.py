@@ -16,8 +16,8 @@ valid_models = [
     "gpt-4o-mini",
 ]
 
-ORG="org-4YRxnB3IZH1jYQxId1jz3uB5"
-PROJECT="proj_MQcLZcYjCGSpZs8GKNm5hj8P"
+ORG="<enter_org_here>"
+PROJECT="<enter_project_here>"
 KEY=os.environ.get("OPENAI_API_KEY_QUERE")
 
 # set seeds

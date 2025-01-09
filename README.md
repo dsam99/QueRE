@@ -4,7 +4,7 @@ This is the GitHub repository for the paper "Predicting the Performance of Black
 
 ![QueRE figure](figs/quere.jpg)
 
-The full paper can be found [here](add arxiv link here). Our code currently supports GPT Models via the OpenAI API and for LLaMA models (and other huggingface LLMs).
+The full paper can be found [here](https://arxiv.org/abs/2501.01558). Our code currently supports GPT Models via the OpenAI API and for LLaMA models (and other huggingface LLMs).
 
 ## Setup
 
@@ -23,11 +23,15 @@ This project invovles using multiple different datasets on which to predict mode
 
 The files for CommonsenseQA are already provided, and the files for WinoGrande and SQUAD will automatically be downloaded via HuggingFace.
 
-## Running our Experiments
+## Running Our Experiments
 
-To run our main experiments, you can use the file "extract_features.py". This will iterate through a particular QA dataset and extract features from the specified LLMs via the previously mentioned follow-up queries. 
+To run our main experiments, you can use the file "extract_features.py". This will iterate through a particular QA dataset and extract features from the specified LLMs via the previously mentioned follow-up queries. For instance, the command
 
+```
+python extract_features.py --llm llama3-8b --dataset squad
+```
 
+will run QueRE on SQuAD for the LLaMA3-8B model. You can modify the LLM of interest with the "--llm" flag and the dataset with the "--dataset" flag.
 
 We currently have the logic for loading LLMs onto GPUs in the "src/llm.py" file. There, you can change the filepaths to the locations of where you have your LLM files stored. Generally, running these files will require 1 GPUs with ~48GB of memory (e.g., a A6000 or L40) for the 3b and 8b models, and 4 GPUs for the 70b models. When running the experiments with the OpenAI API, you should modify your project, organization and API keys in the "src/quere_oai.py" and "data/code_dataset_oai.py" files. 
 
@@ -39,11 +43,11 @@ After extracting the representations from these LLMs, you can then use the files
 If you have used this repository or found our paper useful, please consider citing our work:
 
 ```bibtex
-@article{...,
-  title={Predicting the Performance of Black-box LLMs thorugh Self-Queries},
-  author={Sam, Dylan and Finzi, Marc Anton and Kolter, J Zico},
-  journal={...},
-  year={2024}
+@article{sam2025predicting,
+  title={Predicting the Performance of Black-box LLMs through Self-Queries},
+  author={Sam, Dylan and Finzi, Marc and Kolter, J Zico},
+  journal={arXiv preprint arXiv:2501.01558},
+  year={2025}
 }
 ```
 
